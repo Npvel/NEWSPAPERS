@@ -33,12 +33,13 @@ if HEADLESS_MODE:
     chromeOptions.add_argument('--no-sandbox')
     chromeOptions.add_argument('--disable-gpu')
 chromeOptions.add_argument("--disable-blink-features")
-# chromeOptions.add_argument('--headless')
+chromeOptions.add_argument('--headless')
 chromeOptions.add_argument('--disable-dev-shm-usage')
 chromeOptions.add_experimental_option("excludeSwitches", ["enable-automation"])
 chromeOptions.add_experimental_option('excludeSwitches', ['enable-logging'])
 chromeOptions.add_experimental_option('useAutomationExtension', False)
 
+chromeOptions.add_argument('--log-level=3')
 
 
 s=Service(CHROMEDRIVER_PATH)
